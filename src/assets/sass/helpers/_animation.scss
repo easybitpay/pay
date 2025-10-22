@@ -1,0 +1,40 @@
+//
+// Animations
+//
+// .hover-show-parent {
+
+//     .hover-show-target {
+//         display: none;
+//     }
+//     &:hover {
+//         .hover-show-target {
+//             display: block;
+//         }
+//     }
+// }
+
+// Responsive icon sizes
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .hover#{$infix}-show-parent {
+            .hover-show-target {
+                opacity: 0 !important;
+            }
+
+            &:hover {
+                .hover-show-target {
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+}
+
+.hover-shadow {
+    transition: box-shadow linear .3s;
+    &:hover {
+         box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.12);
+    }
+}

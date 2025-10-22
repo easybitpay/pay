@@ -1,0 +1,49 @@
+.accordion-item:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.accordion-item {
+    border-radius: $accordion-border-radius;
+    transition: all linear .3s;
+
+
+    &:not(:first-of-type) {
+        border: $accordion-border-width solid $accordion-border-color;
+    }
+
+    &.accordion-active {
+        border-color: $primary;
+        box-shadow: 0px 25px 63px -53px $gray-400;
+
+        .accordion-button {
+            .title {
+                color: $primary !important;
+            }
+
+            .date {
+                display: none;
+            }
+        }
+
+        &:not(:first-of-type) {
+            border-color: $primary;
+        }
+    }
+
+    .accordion-button {
+        border-radius: $accordion-border-radius;
+        box-shadow: none;
+
+        &.loading {
+            justify-content: space-between;
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    .accordion-body {
+        padding-top: 1rem;
+        line-height: 28px;
+    }
+}

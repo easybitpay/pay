@@ -1,0 +1,100 @@
+.tooltipElement {
+    border-radius: 1rem;
+    color: $white;
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, -77px);
+    transition: all .1 ease;
+
+    p {
+        font-size: $h5-font-size;
+        margin: 0;
+        font-family: 'neue machina';
+    }
+
+    .triangle {
+        position: absolute;
+        text-align: left;
+        left: 50%;
+        transform: rotate(0deg) skewX(-30deg) scale(1, 0.866) translate(calc(-50% - -2px), 0px);
+        width: 10px;
+        height: 10px;
+        border-top-right-radius: 30%;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: inherit;
+            width: 10px;
+            height: 10px;
+            border-top-right-radius: 70%;
+        }
+
+        &::before {
+            transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+
+        }
+
+        &::after {
+            transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+        }
+    }
+}
+
+#legend-container {
+    ul {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        gap: .5rem;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            cursor: pointer;
+            gap: .5rem;
+
+            span {
+                display: inline-block;
+                flex-shrink: 0;
+                width: .5rem;
+                height: .5rem;
+                border-radius: 30px;
+            }
+
+            p {
+                font-size: 1rem;
+                color: #44444f;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.amount-columns {
+    .item {
+        border-radius: .625rem;
+        padding: 1rem;
+        display: flex;
+        align-items: flex-end;
+        font-size: $h5-font-size;
+        font-family: 'Roboto Mono';
+        color: #fff;
+    }
+
+    &.active-item {
+        .item:not(.active) {
+            background-color: $gray-500 !important;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .item {
+            height: 300px;
+        }
+    }
+}

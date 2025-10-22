@@ -1,0 +1,83 @@
+.ticket-messages {
+    padding: 0 1.5rem 2.5rem;
+    height: 310px;
+    overflow: auto;
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+    position: relative;
+
+    .item-box-holder {
+        display: flex;
+        flex-flow: column;
+        gap: .75rem;
+
+        .item-box {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: flex-start;
+            align-items: flex-end;
+            width: 100%;
+
+            .item {
+                max-width: 52%;
+                padding: 1rem;
+                border-radius: $border-radius-sm;
+                background-color: $blue-100;
+                border: 1px solid $blue-200;
+                letter-spacing: .006rem;
+            }
+
+            .time {
+                color: $gray-500;
+            }
+        }
+
+        .medias {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .item {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: $border-radius;
+                }
+            }
+        }
+
+        &.user {
+            align-items: flex-end;
+
+            .item-box {
+                flex-flow: row-reverse;
+
+                .item {
+                    background-color: $primary;
+                    border-color: $primary;
+                    color: $white;
+                }
+            }
+
+            .medias {
+                flex-flow: row-reverse;
+            }
+        }
+    }
+
+
+    @media (max-width: 758px) {
+        .item-box-holder {
+            .item-box {
+                .item {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

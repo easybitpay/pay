@@ -1,0 +1,29 @@
+.scroll-spy {
+    position: sticky;
+    top: 1rem;
+    width: 240px;
+
+    .nav-link {
+        font-size: $font-size-base;
+        line-height: 28px;
+        letter-spacing: .006rem;
+        &.active {
+            color: $primary;
+            &+ .child {
+                display: flex;
+
+            }
+        }
+    }
+
+    .child {
+        display: none;
+        padding-left: 1.25rem;
+        border-left: 2px solid $primary;
+        gap: .3rem;
+
+        .nav-link {
+            font-size: 1rem;
+        }
+    }
+}

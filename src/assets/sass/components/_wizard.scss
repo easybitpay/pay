@@ -1,0 +1,36 @@
+.wizard {
+    .wizard-item {
+        border-radius: 2rem;
+        border-color: $gray-200;
+
+        &.wizard-active {
+            border-color: $primary;
+        }
+
+        .wizard-data {
+            display: flex;
+            flex-flow: column;
+        }
+
+        .wizard-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        @media (min-width: 1200px) {
+            .wizard-data {
+                min-height: 744px;
+            }
+
+            .wizard-info {
+                height: 606px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+}

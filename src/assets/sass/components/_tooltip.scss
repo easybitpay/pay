@@ -1,0 +1,35 @@
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+    border-width: 1px;
+    border-top-color: transparent;
+    top: -14px;
+    transform: rotateZ(45deg);
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+    border-width: 1px;
+    border-right-color: $gray-500;
+    right: -14px;
+    transform: rotateZ(135deg);
+}
+
+.tooltip {
+    width: $tooltip-max-width;
+
+    .tooltip-arrow::before {
+        content: "";
+        width: 28px;
+        height: 28px;
+        border: 1px solid $gray-500;
+        background: $tooltip-bg;
+        border-top: 0;
+        border-left: 0;
+        border-bottom-right-radius: 6px;
+    }
+}
+
+.tooltip-inner {
+    border: 1px solid $gray-500;
+    padding-top: 1.313rem;
+}

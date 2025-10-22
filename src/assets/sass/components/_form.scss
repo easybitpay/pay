@@ -1,0 +1,183 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.form-control {
+    letter-spacing: -.02rem;
+    height: 2.5rem;
+    box-shadow: none !important;
+
+    &.form-control-sm {
+        height: 2rem;
+    }
+}
+
+.form-select {
+    letter-spacing: -.02rem;
+    height: 2.5rem;
+    box-shadow: none !important;
+
+    &.form-select-sm {
+        height: 2rem;
+    }
+}
+
+.was-validated :invalid~.invalid-feedback,
+.was-validated :invalid~.invalid-tooltip,
+.is-invalid~.invalid-feedback,
+.is-invalid~.invalid-tooltip {
+    display: none;
+}
+
+.was-validated .form-control:valid:focus,
+.form-control.is-valid:focus,
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    border-color: $input-border-color;
+}
+
+.invalid-feedback {
+    display: none;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    cursor: text;
+    border-color: red;
+    z-index: 1;
+    margin: 0;
+    font-size: $input-font-size;
+
+    span {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+    }
+}
+
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    padding-right: 3rem;
+    background-position: right 1rem center;
+    background-size: 1.5rem 1.5rem;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    background-image: none;
+}
+
+// OTP Input
+.otp-input {
+    >div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &.otp-input-center {
+        >div {
+            gap: 1.5rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        &.otp-input-small-gap {
+            >div {
+                gap: .75rem;
+            }
+        }
+    }
+}
+
+textarea {
+    resize: none;
+    line-height: 28px;
+}
+
+// Radio 
+.form-check-input[type="radio"] {
+    width: 24px;
+    height: 24px;
+    background-size: 7.5px;
+    background-position: center;
+    border: 1px solid $primary;
+
+    &:not(:checked) {
+        background-image: url(/media/icons/icons/radio-deactive.svg) !important;
+        background-color: $gray-100;
+    }
+
+    &.form-check-input-sm {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.form-check {
+    padding-left: 2.5rem;
+
+    .form-check-input {
+        margin-left: -2.5rem;
+        margin-top: 0;
+
+        &:checked~.form-check-label {
+            color: $primary;
+        }
+    }
+}
+
+.grouped-input {
+    display: flex;
+
+    label {
+        align-self: center;
+        min-width: 130px;
+        font-size: 1rem;
+        color: $gray-600;
+    }
+
+    input:not(.form-check-input) {
+        border: none !important;
+        outline: none !important;
+        background-color: inherit !important;
+        font-size: $font-size-lg;
+        font-family: 'Neue Machina';
+        color: $gray-800;
+        font-weight: 300;
+        flex-grow: 1;
+
+        &::placeholder {
+            font-size: 1rem;
+            color: $input-placeholder-color;
+        }
+    }
+
+    @media (min-width: 576px) {
+        input:not(.form-check-input) {
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        label {
+            display: none;
+        }
+
+        input:not(.form-check-input) {
+            width: 100%;
+
+            &::placeholder {
+                font-family: 'Roboto';
+                font-weight: 400;
+            }
+        }
+    }
+}

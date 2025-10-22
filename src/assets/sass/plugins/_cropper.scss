@@ -1,0 +1,9 @@
+@import "cropperjs/dist/cropper.css";
+
+.cropper-view-box {
+    outline: none;
+}
+
+.cropper-container , .cropper-drag-box  {
+    border-radius: $border-radius;
+}

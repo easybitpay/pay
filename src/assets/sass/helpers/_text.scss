@@ -1,0 +1,148 @@
+//
+// Text
+//
+// Text colors
+// [data-bs-theme='light'] {
+
+@each $name,
+$color in $theme-text-colors {
+
+    // Base
+    .text-#{$name} {
+        color: $color !important;
+    }
+
+    // Hover
+    .text-hover-#{$name} {
+        cursor: pointer;
+
+        &:hover {
+            color: $color !important;
+
+            i {
+                color: $color !important;
+            }
+
+            .svg-icon {
+                path {
+                    stroke: $color;
+                }
+            }
+        }
+    }
+
+    // Active Parent
+    .active-box {
+        .active-parent-text-#{$name} {
+            color: $color;
+        }
+    }
+
+    // Placeholder
+    .placeholder-#{$name} {
+        &::placeholder {
+            color: $color;
+        }
+    }
+}
+
+@each $name,
+$color in $app-colors {
+
+    // Base
+    .text-app-#{$name} {
+        color: $color !important;
+    }
+}
+
+// }
+
+// [data-bs-theme='dark'] {
+
+//     @each $name,
+//     $color in $theme-dark-text-colors {
+
+//         // Base
+//         .text-#{$name} {
+//             color: $color !important;
+//         }
+
+//         // Hover
+//         .text-hover-#{$name} {
+//             cursor: pointer;
+
+//             &:hover {
+//                 color: $color !important;
+
+//                 i {
+//                     color: $color !important;
+//                 }
+
+//                 .svg-icon {
+//                     path {
+//                         stroke: $color;
+//                     }
+//                 }
+//             }
+//         }
+
+//         // Active Parent
+//         .active-box {
+//             .active-parent-text-#{$name} {
+//                 color: $color;
+//             }
+//         }
+
+//         // Placeholder
+//         .placeholder-#{$name} {
+//             &::placeholder {
+//                 color: $color;
+//             }
+//         }
+//     }
+// }
+
+// Letter Spacing
+$letter-spacings: ("sm": -.02rem, "base": .006rem) !default;
+
+@each $key,
+$value in $letter-spacings {
+
+    // Base
+    .ls-#{$key} {
+        letter-spacing: $value !important;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+// Text transparent
+.text-transparent {
+    color: transparent;
+}
+
+// Cursor pointer
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Cursor default
+.cursor-default {
+    cursor: default;
+}
+
+// Cursor move
+.cursor-move {
+    cursor: move;
+}
+
+// Text Ellipsis
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: var(--ellipsis-width);
+    display: block;
+    overflow: hidden;
+}

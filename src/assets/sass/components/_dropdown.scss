@@ -1,0 +1,297 @@
+.dropdown {
+    .radio-box {
+        width: 20px;
+        height: 20px;
+        border-radius: .469rem;
+        border: 2px solid $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            width: 12.5px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: $gray-300;
+
+            &.bullet {
+                width: 7.5px;
+                height: 7.5px;
+            }
+        }
+    }
+
+    .active {
+        .radio-box {
+            background-color: $primary;
+
+            span {
+                background-color: $white;
+            }
+        }
+    }
+
+
+    .dropdown-menu {
+        &.show {
+            display: flex;
+            flex-flow: column;
+            gap: .5rem;
+        }
+
+        .custom-scroll {
+            overflow: auto;
+            max-height: 184px;
+        }
+
+        .dropdown-item {
+            line-height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        &[data-popper-placement='bottom-start'] {
+
+            &.triangle,
+            &.md-triangle,
+            &.sm-triangle {
+
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+                border-top: 0;
+
+                &::after {
+                    content: "";
+                    background: inherit;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    right: -1px;
+                    top: -15px;
+                    border-right: 1px solid $dropdown-border-color;
+                    border-bottom: 1px solid $dropdown-border-color;
+                }
+
+                &::before {
+                    content: "";
+                    background: inherit;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: -1px;
+                    top: -15px;
+                    border-left: 1px solid $dropdown-border-color;
+                    border-bottom: 1px solid $dropdown-border-color;
+                }
+            }
+        }
+
+        &[data-popper-placement='top-start'] {
+
+            &.triangle,
+            &.md-triangle,
+            &.sm-triangle {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                border-bottom: 0;
+
+                &::after {
+                    content: "";
+                    background: inherit;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    right: -1px;
+                    bottom: -15px;
+                    border-right: 1px solid $dropdown-border-color;
+                    border-top: 1px solid $dropdown-border-color;
+                }
+
+                &::before {
+                    content: "";
+                    background: inherit;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: -1px;
+                    bottom: -15px;
+                    border-left: 1px solid $dropdown-border-color;
+                    border-top: 1px solid $dropdown-border-color;
+                }
+            }
+        }
+
+        &.sm-triangle {
+
+            &::after,
+            &::before {
+                width: 15px;
+                height: 10px;
+                bottom: -10px;
+            }
+        }
+    }
+
+
+
+    .multi-select-dropdown-text-content {
+        width: calc(100% - 1.5rem - 20px - 10px);
+
+        &.with-svg {
+            width: calc(100% - 1.5rem - 20px - 10px - 23px)
+        }
+    }
+
+    .multi-select-dropdown-text-placeholder {
+        width: calc(100% - 1.5rem - 8px);
+
+        &.with-svg {
+            width: calc(100% - 1.5rem - 8px - 23px);
+        }
+    }
+
+    .and-after:not(:last-child) {
+        &::after {
+            content: "&";
+            margin: 0 .25rem;
+        }
+    }
+
+
+    .select-dropdown-text-content,
+    .select-dropdown-text-placeholder {
+        width: calc(100% - 1.5rem - 10px);
+
+        &.with-svg {
+            width: calc(100% - 1.5rem - 23px - 10px)
+        }
+    }
+
+    &.grouped-dropdown {
+        @media (min-width: 576px) {
+            .select-dropdown-text-content {
+                width: calc(100% - 1.5rem - 10px - 130px);
+            }
+            .select-dropdown-text-placeholder {
+                width: calc(100% - 1.5rem - 10px - 130px);
+        
+                &.with-svg {
+                    width: calc(100% - 1.5rem - 23px - 10px - 130px)
+                }
+            }
+
+            .multi-select-dropdown-text-content {
+                width: calc(100% - 1.5rem - 20px - 10px - 130px);
+        
+                &.with-svg {
+                    width: calc(100% - 1.5rem - 20px - 10px - 23px - 130px)
+                }
+            }
+        }
+    }
+}
+
+
+
+.dropdown-toggle {
+    font-weight: $font-weight-normal;
+    gap: 0;
+    font-weight: 400;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &:not(.btn-sm) {
+        font-size: 1rem;
+    }
+
+    &::after {
+        background: url(/media/icons/icons/chevron-down.svg);
+        border: none;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-inline-start: auto;
+    }
+}
+
+.select-dropdown {
+    .dropdown-toggle {
+        justify-content: space-between;
+    }
+
+    .dropdown-menu {
+        max-height: 300px;
+        overflow: auto;
+        min-width: 254px;
+    }
+}
+
+.select-coin-dropdown {
+    .dropdown-toggle {
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .dropdown-menu {
+        max-height: 300px;
+        overflow: auto;
+        min-width: 254px;
+    }
+}
+
+#birthdateDropdown {
+    .dropdown-menu {
+        .input-box {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .item {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border: 1px solid $gray-300;
+                border-radius: 12.5px;
+
+                &:focus,
+                &:active,
+                &:hover,
+                &:focus-within {
+                    border-color: $primary;
+
+                    .form-control {
+                        border-color: $primary;
+                    }
+                }
+
+                .svg-box {
+                    width: 2rem;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .form-control {
+                    border-radius: 0;
+                    border-top: 0;
+                    border-bottom: 0;
+                    text-align: center;
+                    caret-color: $primary;
+                    border-color: $gray-300;
+                }
+            }
+
+            @media (max-width: 576px) {
+                flex-flow: column;
+            }
+        }
+    }
+}

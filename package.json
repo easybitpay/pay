@@ -1,0 +1,52 @@
+{
+  "name": "easybitpay-v5",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@popperjs/core": "^2.11.8",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "axios": "^1.5.1",
+    "bootstrap": "^5.3.2",
+    "chart.js": "^4.4.0",
+    "colorthief": "npm:@pioug/colorthief@^3.0.1",
+    "cropperjs": "^1.6.1",
+    "crypto-js": "^4.2.0",
+    "decimal.js": "^10.4.3",
+    "dropzone": "^6.0.0-beta.2",
+    "flag-icons": "^6.11.1",
+    "moment": "^2.29.4",
+    "multicoin-address-validator": "^0.5.12",
+    "pinia": "^2.1.6",
+    "prismjs": "^1.29.0",
+    "swiper": "^10.3.1",
+    "uuid": "^9.0.1",
+    "vue": "^3.3.4",
+    "vue-chartjs": "^5.2.0",
+    "vue-datepicker-next": "^1.0.3",
+    "vue-inline-svg": "^3.1.2",
+    "vue-router": "^4.2.4",
+    "vue-skeletor": "^1.0.6",
+    "vue3-dropzone": "^2.1.2",
+    "vue3-otp-input": "^0.4.1",
+    "web3": "^1.8.1"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.3.3",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "eslint": "^8.49.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "prettier": "^3.0.3",
+    "sass": "^1.68.0",
+    "vite": "^4.4.9"
+  }
+}

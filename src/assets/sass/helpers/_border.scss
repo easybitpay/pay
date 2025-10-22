@@ -1,0 +1,40 @@
+//
+// Border
+//
+// Border colors
+@each $name,
+$color in $theme-text-colors {
+
+    // Base color
+    .border-#{$name} {
+        border-color: $color !important;
+    }
+
+    // Hover
+    .border-hover-#{$name} {
+        // transition: $transition-link;
+
+        &:hover {
+            // transition: $transition-link;
+            border-color: $color !important;
+        }
+    }
+
+    // Active
+    .border-active-#{$name} {
+        // transition: $transition-link;
+
+        &.active {
+            // transition: $transition-link;
+            border-color: $color !important;
+        }
+    }
+}
+
+@each $name,
+$color in $app-colors {
+    // Base
+    .border-app-#{$name} {
+        border-color: $color !important;
+    }
+}

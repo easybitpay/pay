@@ -1,0 +1,26 @@
+//
+// Dropzone plugin customization:  https://www.dropzonejs.com
+//
+// Basic
+@import "dropzone/dist/dropzone.css";
+.dropzone {
+    width: 100%;
+    height: 120px;
+    min-height: 120px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed $cyan-500;
+    background-color: $cyan-100;
+    border-radius: $border-radius !important;
+    position: relative;
+    .clickable {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}

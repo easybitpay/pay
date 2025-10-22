@@ -1,0 +1,11 @@
+.offcanvas-backdrop {
+    background: linear-gradient(45deg, #E5E9EC 0%, rgba(229, 233, 236, 0.00) 100%);
+}
+
+.offcanvas.offcanvas-bottom {
+    left: 50%;
+    transform: translate(-50%, 100%);
+}
+.offcanvas.offcanvas-bottom.show:not(.hiding) {
+    transform: translate(-50%, 0);
+}

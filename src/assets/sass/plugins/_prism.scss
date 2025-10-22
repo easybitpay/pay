@@ -1,0 +1,54 @@
+@import 'prismjs/themes/prism.css';
+
+code[class*="language-"],
+pre[class*="language-"] {
+    font-size: 1rem;
+    line-height: 28px;
+}
+
+pre[class*="language-"] {
+    padding: 0;
+    margin: 0;
+    background-color: $white;
+}
+
+.prism-card {
+    border-color: $gray-500;
+
+    .card-header {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-color: inherit;
+
+        .nav-tabs {
+            gap: 0;
+            margin: 0;
+
+            .nav-link {
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                border-left: 1px solid $gray-500;
+                border-right: 1px solid $gray-500;
+
+                &:first-child {
+                    border-left: none;
+                }
+
+                &:not(.active) {
+                    color: $gray-800;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+
+    .card-body {
+        p {
+            line-height: 28px;
+        }
+    }
+
+    .card-body {
+        padding-top: .375rem;
+    }
+}

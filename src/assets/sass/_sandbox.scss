@@ -1,0 +1,194 @@
+.sandbox {
+    $primary: $warning;
+
+    .btn-light {
+        color: $primary !important;
+    }
+
+    .btn-primary {
+        background-color: $primary;
+        border-color: $primary;
+
+        &:hover {
+            background-color: darken($color: $primary, $amount: 10);
+            border-color: darken($color: $primary, $amount: 10);
+            box-shadow: 0px 8px 24px 0px rgba($color: $primary, $alpha: 0.5) !important
+        }
+
+        &:disabled,
+        &.disabled {
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+
+    .btn-outline-primary {
+        &:hover {
+            box-shadow: 0px 8px 24px 0px rgba($color: $primary, $alpha: 0.5) !important
+        }
+    }
+
+    .btn-check:checked+.btn,
+    :not(.btn-check)+.btn:active,
+    .btn:first-child:active,
+    .btn.active,
+    .btn.show {
+        &:not(.dropdown-toggle) {
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+
+    .form-check .form-check-input:checked~.form-check-label {
+        color: $primary;
+    }
+
+    .wizard .wizard-item.wizard-active {
+        border-color: $primary;
+    }
+
+    .bg-primary,
+    .bg-cyan-500 {
+        background-color: $primary !important;
+    }
+
+    .text-primary,
+    .text-cyan-500 {
+        color: $primary !important;
+    }
+
+    .border-primary,
+    .border-cyan-500 {
+        border-color: $primary !important;
+    }
+
+    .text-hover-primary {
+        &:hover {
+            color: $primary !important;
+        }
+    }
+
+    .svg-icon-primary,
+    .svg-icon-cyan-500 {
+        path {
+            stroke: $primary;
+        }
+    }
+
+    .dropdown .active .radio-box {
+        background-color: $primary;
+        border-color: $primary;
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active,
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        color: $primary;
+    }
+
+    #birthdateDropdown .dropdown-menu .input-box .item:focus,
+    #birthdateDropdown .dropdown-menu .input-box .item:active,
+    #birthdateDropdown .dropdown-menu .input-box .item:hover,
+    #birthdateDropdown .dropdown-menu .input-box .item:focus-within {
+        border-color: $primary;
+    }
+
+    #birthdateDropdown .dropdown-menu .input-box .item:focus .form-control,
+    #birthdateDropdown .dropdown-menu .input-box .item:active .form-control,
+    #birthdateDropdown .dropdown-menu .input-box .item:hover .form-control,
+    #birthdateDropdown .dropdown-menu .input-box .item:focus-within .form-control {
+        border-color: $primary;
+    }
+
+    .main-container #sidebar {
+        border-color: $primary;
+    }
+
+    .main-container #sidebar .user-box {
+        height: 223px;
+        background-image: url(/media/images/banner/sand-box.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .form-check-input[type=radio] {
+        border-color: $primary;
+    }
+
+    .form-check-input:checked {
+        border-color: $primary;
+        background-color: $primary;
+    }
+
+    .custom-scroll {
+        &::-webkit-scrollbar-thumb {
+            background: $primary;
+        }
+    }
+
+    .range::-webkit-slider-thumb {
+        background: $primary;
+    }
+
+    .main-container #main #navbar-layout header a:hover,
+    .main-container #main #navbar-layout header a.router-link-exact-active {
+        color: $primary;
+    }
+
+    .scroll-spy .child {
+        border-color: $primary;
+    }
+
+    .scroll-spy .nav-link.active,
+    .nav-link:hover,
+    .nav-link:focus {
+        color: $primary;
+    }
+
+    .category-card.active,
+    .category-card:hover {
+        border-color: $primary;
+    }
+
+    .category-card.active .card-body .title,
+    .category-card:hover .card-body .title {
+        color: $primary;
+    }
+
+    .accordion-item.accordion-active,
+    .accordion-item.accordion-active:not(:first-of-type) {
+        border-color: $primary;
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: $primary;
+    }
+
+    .main-container #sidebar .links .link.active::before {
+        background-color: $primary;
+    }
+
+    .main-container #sidebar .links .link.active {
+        color: $primary !important;
+    }
+
+    .main-container #sidebar .links .collapse-link svg[aria-expanded=true] path {
+        stroke: $primary;
+    }
+
+    .main-container #sidebar .links .link.active .icon path {
+        stroke: $primary;
+    }
+
+    .dropzone {
+        border-color: $primary;
+    }
+
+    .ticket-messages .item-box-holder.user .item-box .item {
+        border-color: $primary;
+        background-color: $primary;
+    }
+
+
+}

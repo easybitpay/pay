@@ -1,0 +1,84 @@
+//
+// Custom background helpers
+//
+// Background theme light colors
+@each $name,
+$color in $theme-text-colors {
+
+    // Base
+    .bg-#{$name} {
+        background-color: $color !important;
+    }
+
+    // Hover
+    .bg-hover-#{$name} {
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color !important;
+        }
+    }
+
+    // Active 
+    .bg-active-#{$name} {
+        &.active {
+            background-color: $color !important;
+        }
+    }
+
+    // Light
+    .bg-light-#{$name} {
+        background-color: lighten($color: $color, $amount: 10);
+    }
+}
+
+@each $name,
+$color in $app-colors {
+    // Base
+    .bg-app-#{$name} {
+        background-color: $color !important;
+    }
+}
+
+.gradient-image-box {
+    background: linear-gradient(90deg, #FFF 35.33%, rgba(255, 255, 255, 0.00) 89.34%), var(--background), lightgray 50% / cover no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &.disabled {
+        background-blend-mode: luminosity;
+    }
+}
+
+.gradient-loading-box {
+    background: linear-gradient(90deg, #FFF 35.33%, rgba(255, 255, 255, 0.00) 89.34%), lightgray 50% / cover no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.two-fa-card {
+    background: url(/media/images/banner/auth-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .card-body {
+        backdrop-filter: grayscale(1);
+
+        .title {
+            font-size: 2rem;
+        }
+
+        .info {
+            max-width: 824px;
+        }
+    }
+}
+
+.card-linear-background {
+    background-image: var(--background);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply, normal;
+}

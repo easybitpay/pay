@@ -1,0 +1,17 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.easybitpay.wallet.dev",
+    "sha256_cert_fingerprints":
+    ["4F:2D:0C:C7:12:10:69:AC:86:EB:13:5C:4F:74:60:6A:E5:70:7B:2C:AA:91:86:EB:FE:A9:85:59:CD:2B:63:F7"]
+  }
+},{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.easybitpay.wallet",
+    "sha256_cert_fingerprints":
+    ["5B:B8:0C:0C:12:A6:C3:58:0F:26:51:A6:C2:79:C7:35:BE:71:A7:FF:6B:B5:21:26:12:53:C3:1C:34:CD:12:F4"]
+  }
+}]
