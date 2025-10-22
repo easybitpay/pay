@@ -12,7 +12,7 @@
   - [Select Token Page](#select-token-page)
   - [Gateway Page](#gateway-page)
   - [Status Page](#status-page)
-  - [Store (Pinia)](#store-pinia)
+  - [Store](#store-pinia)
   - [Notes](#notes-1)
 
 ---
@@ -134,7 +134,9 @@ This project is designed so that developers can customize the look and feel of t
 
 This project uses a structured payment flow with three main pages: **Select Token**, **Gateway**, and **Status**.
 
-### Select Token Page (`/pay/invoice/:id` or `/pay-sandbox/invoice/:id`)
+### Select Token Page
+
+Path: `/pay/invoice/:id` or `/pay-sandbox/invoice/:id`
 
 - Displays customer info and invoice items.  
 - User selects a **Coin** and a **Network**.  
@@ -142,7 +144,9 @@ This project uses a structured payment flow with three main pages: **Select Toke
 - Selections are stored in the `pay` store (`selectedCoin`, `selectedNetwork`).  
 - On valid form submission, navigates to the Gateway page.
 
-### Gateway Page (`/pay/gateway/:id`)
+### Gateway Page 
+
+Path: `/pay/gateway/:id`
 
 - Shows selected Coin, Network, remaining amount, and QR code.  
 - Polls API every 30 seconds to update payment status.  
@@ -150,7 +154,9 @@ This project uses a structured payment flow with three main pages: **Select Toke
 - Users can cancel the payment.  
 - Transactions are displayed in real-time from the store.
 
-### Status Page (`/pay/status/:id`)
+### Status Page
+
+Path: `/pay/status/:id`
 
 - Displays payment status: Expired, Canceled, Completed.  
 - Shows transaction history.  
@@ -160,7 +166,7 @@ This project uses a structured payment flow with three main pages: **Select Toke
   - Cancel payment (`cancelPayment`)  
   - Status code to text/color (`convertCodeToStatus`, `convertCodeToColor`)
 
-### Store (`pay` Pinia Store)
+### Store
 
 Manages:
 
