@@ -134,7 +134,7 @@ This project is designed so that developers can customize the look and feel of t
 
 This project uses a structured payment flow with three main pages: **Select Token**, **Gateway**, and **Status**.
 
-### 1. Select Token Page (`/pay/invoice/:id` or `/pay-sandbox/invoice/:id`)
+### Select Token Page (`/pay/invoice/:id` or `/pay-sandbox/invoice/:id`)
 
 - Displays customer info and invoice items.  
 - User selects a **Coin** and a **Network**.  
@@ -142,7 +142,7 @@ This project uses a structured payment flow with three main pages: **Select Toke
 - Selections are stored in the `pay` store (`selectedCoin`, `selectedNetwork`).  
 - On valid form submission, navigates to the Gateway page.
 
-### 2. Gateway Page (`/pay/gateway/:id`)
+### Gateway Page (`/pay/gateway/:id`)
 
 - Shows selected Coin, Network, remaining amount, and QR code.  
 - Polls API every 30 seconds to update payment status.  
@@ -150,7 +150,7 @@ This project uses a structured payment flow with three main pages: **Select Toke
 - Users can cancel the payment.  
 - Transactions are displayed in real-time from the store.
 
-### 3. Status Page (`/pay/status/:id`)
+### Status Page (`/pay/status/:id`)
 
 - Displays payment status: Expired, Canceled, Completed.  
 - Shows transaction history.  
@@ -160,7 +160,7 @@ This project uses a structured payment flow with three main pages: **Select Toke
   - Cancel payment (`cancelPayment`)  
   - Status code to text/color (`convertCodeToStatus`, `convertCodeToColor`)
 
-### 4. Store (`pay` Pinia Store)
+### Store (`pay` Pinia Store)
 
 Manages:
 
@@ -169,7 +169,7 @@ Manages:
 - `userInputs`, `paymentTransactions`  
 - Loading states and helpers to refresh or fake payments  
 
-### 5. Notes
+### Notes
 
 - Selections persist in **localStorage**.  
 - Sandbox mode allows testing without real transactions.  
