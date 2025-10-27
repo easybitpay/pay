@@ -1,12 +1,9 @@
 <script setup>
 // Vue
-import { computed, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 // Hook
 import useIconImage from '@/composables/useIconImage'
-
-// Store
-import { useAppStore } from '@/stores/app'
 
 // Props
 const props = defineProps({
@@ -77,30 +74,10 @@ const props = defineProps({
 const emit = defineEmits(['change', 'update'])
 
 // ----- START ----- //
-const store = useAppStore()
 
 const { iconImage, storageImage } = useIconImage()
 
-const networks = computed(() => store.networks)
-
 const search = ref('')
-
-/**
- * Show Network Name
- */
-const showNetwork = (networkID) => {
-  let networkName = ''
-
-  for (let i = 0; i < networks.value.length; i++) {
-    const network = networks.value[i]
-    if (network.id === networkID) {
-      networkName = network.name
-      break
-    }
-  }
-
-  return networkName
-}
 
 /**
  * Filtered Items
@@ -173,9 +150,9 @@ onMounted(() => {
       <!-- end::Icon -->
 
       <!-- begin::Grouped -->
-      <span class="d-none d-sm-block text-start" style="min-width: 130px" v-if="grouped">{{
-        grouped
-      }}</span>
+      <span class="d-none d-sm-block text-start" style="min-width: 130px" v-if="grouped">
+        {{ grouped }}
+      </span>
       <!-- end::Grouped -->
 
       <!-- begin::Show Selected -->
@@ -202,7 +179,7 @@ onMounted(() => {
         <span class="ellipsis text-start" style="--ellipsis-width: 100%">
           {{ selected[show] }}
           <span v-if="showCoinNetwork" class="fs-9 text-gray-600">
-            {{ selected.network?.name || showNetwork(selected.network_id) }}
+            {{ selected.network?.name }}
           </span>
         </span>
       </div>
@@ -266,7 +243,7 @@ onMounted(() => {
               />
               {{ item[show] }}
               <span v-if="showCoinNetwork" class="fs-9 text-gray-600">
-                {{ item.network?.name || showNetwork(item.network_id) }}
+                {{ item.network?.name }}
               </span>
             </div>
           </a>
