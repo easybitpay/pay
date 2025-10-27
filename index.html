@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme='light'>
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
@@ -7,6 +7,16 @@
     <script src="https://apis.google.com/js/api:client.js"></script>
     <title>EasyBitPay</title>
     <link rel="assetlinks.json file" href="/.well-known/assetlinks.json" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4L9CF1D1HZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-4L9CF1D1HZ')
+    </script>
   </head>
   <body>
     <div id="app" class="d-flex flex-column flex-root"></div>
