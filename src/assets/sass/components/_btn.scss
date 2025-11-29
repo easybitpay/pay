@@ -1,50 +1,70 @@
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    min-height: 2.5rem;
-    // color: $white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  // color: $white !important;
+  transition: all ease 0.3s;
+  line-height: 2.5rem;
+
+  svg {
+    transition: all ease 0.3s;
+  }
+  &.animation {
+    &:hover {
+      transform: translateY(-2px);
+      // svg {
+      //   transform: translate(4px);
+      // }
+    }
+  }
 }
 
 .btn-sm {
-    min-height: 2.063rem;
+  min-height: 2.063rem;
+  line-height: 2.036rem;
 }
 
 .btn-light {
-    color: $primary !important;
+  color: $primary !important;
 }
 
-@each $name,
-$value in $theme-text-colors {
-    .btn {
-        &.no-shadow {
-            &:hover {
-                box-shadow: none !important;
-            }
-        }
+@each $name, $value in $theme-text-colors {
+  .btn {
+    &.no-shadow {
+      &:hover {
+        box-shadow: none !important;
+      }
     }
+  }
 
-    .btn-#{$name} {
-        &:hover {
-            background-color: darken($color: $value, $amount: 10);
-            border-color: darken($color: $value, $amount: 10);
-            box-shadow: 0px 8px 24px 0px rgba($color: $value, $alpha: 0.5) !important
-        }
+  .btn-#{$name} {
+    &:hover {
+      background-color: darken($color: $value, $amount: 10);
+      border-color: darken($color: $value, $amount: 10);
+      box-shadow: 0px 8px 24px 0px rgba($color: $value, $alpha: 0.5) !important;
     }
+  }
 
-    .btn-outline-#{$name} {
-        &:hover {
-            box-shadow: 0px 8px 24px 0px rgba($color: $value, $alpha: 0.5) !important
-        }
+  .btn-outline-#{$name} {
+    &:hover {
+      box-shadow: 0px 8px 24px 0px rgba($color: $value, $alpha: 0.5) !important;
     }
+  }
 }
 
-@each $key,
-$value in $custom-sizes {
-    .btn {
-        &.h-#{$key} {
-            min-height: initial !important;
-        }
+@each $key, $value in $custom-sizes {
+  .btn {
+    &.h-#{$key} {
+      min-height: initial !important;
+      line-height: #{$key};
     }
+  }
+}
+
+.btn-white {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
 }

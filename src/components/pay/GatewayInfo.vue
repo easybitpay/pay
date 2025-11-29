@@ -26,7 +26,7 @@ const payLoading = computed(() => store.payLoading)
   <div
     :class="`card ${
       payLoading && !invoiceDetail.base_token ? 'gradient-loading-box' : 'gradient-image-box'
-    } border-gray-200 min-h-156px rounded mb-11`"
+    } border-gray-200 min-h-156px rounded-1 mb-11`"
     :style="`--background: url(${
       invoiceDetail?.app?.banner
         ? storageImage(invoiceDetail?.app?.banner)
